@@ -2,9 +2,11 @@ import * as React from 'react';
 import styles from './App.module.scss';
 import { IAppProps } from './IAppProps';
 import { escape } from '@microsoft/sp-lodash-subset';
+import Greeter, { IGreetingProps } from './Greeter/Greeting';
 
 export default class App extends React.Component<IAppProps, {}> {
   public render(): React.ReactElement<IAppProps> {
+
     return (
       <div className={ styles.app }>
         <div className={ styles.container }>
@@ -16,10 +18,13 @@ export default class App extends React.Component<IAppProps, {}> {
               <a href="https://aka.ms/spfx" className={ styles.button }>
                 <span className={ styles.label }>Learn more</span>
               </a>
-            </div>
+            </div>            
           </div>
         </div>
-      </div>
+
+        <Greeter/>
+             
+        </div>
     );
   }
 }

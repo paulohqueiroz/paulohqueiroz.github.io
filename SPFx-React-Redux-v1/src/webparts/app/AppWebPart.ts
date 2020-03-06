@@ -8,8 +8,9 @@ import {
 import { BaseClientSideWebPart } from '@microsoft/sp-webpart-base';
 
 import * as strings from 'AppWebPartStrings';
-import App from './components/App';
-import { IAppProps } from './components/IAppProps';
+import App from './components/App/App';
+import { IAppProps } from './components/App/IAppProps';
+import {  UrlQueryParameterCollection } from '@microsoft/sp-core-library';
 
 export interface IAppWebPartProps {
   description: string;
@@ -18,6 +19,14 @@ export interface IAppWebPartProps {
 export default class AppWebPart extends BaseClientSideWebPart <IAppWebPartProps> {
 
   public render(): void {
+
+    var queryParameters = new UrlQueryParameterCollection(window.location.href);
+    let id: string = "";
+    if (queryParameters.getValue("itemid")) {
+      id = queryParameters.getValue("itemid");
+    }
+
+
     const element: React.ReactElement<IAppProps> = React.createElement(
       App,
       {

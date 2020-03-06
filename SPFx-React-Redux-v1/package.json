@@ -26,7 +26,9 @@
     "react-dom": "16.8.5",
     "react-redux": "^7.2.0",
     "redux": "^4.0.5",
-    "redux-thunk": "^2.3.0"
+    "redux-form": "^8.3.1",
+    "redux-thunk": "^2.3.0",
+    "sp-pnp-js": "^3.0.10"
   },
   "resolutions": {
     "@types/react": "16.8.8"

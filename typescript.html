@@ -1,0 +1,32 @@
+What is TypeScript?
+
+TypeScript is a typed superset of JavaScript that compiles to plain JavaScript. It's like JavaScript with super powers. 
+
+let's check out what these powers are: 
+
+1. You can compile your code and end up with plain js: tsc greeter.ts
+
+2. Type annotations
+    function greeter(person: string) {
+        return "Hello, " + person;
+    }
+
+3. Interfaces 
+    interface Person {
+        firstName: string;
+        lastName: string;
+    }
+
+4. Classes
+    class Student {
+        fullName: string;
+        constructor(public firstName: string, public middleInitial: string, public lastName: string) {
+            this.fullName = firstName + " " + middleInitial + " " + lastName;
+        }
+    }
+
+
+You can find more information and you can dive into some advanced concepts by accessing here:
+1. https://www.typescriptlang.org/
+2. https://github.com/Microsoft/TypeScript/blob/master/doc/spec.md
+3. https://www.typescriptlang.org/docs/handbook/advanced-types.html

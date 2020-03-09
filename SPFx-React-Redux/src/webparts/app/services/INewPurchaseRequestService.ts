@@ -1,4 +1,4 @@
-import { INewFormState } from '../state/INewFormControlsState';
+import { INewFormState } from '../components/App/INewFormControlsState';
 
 // Represents the service to interact with SharePoint to work with purchase request.
 export default interface INewPurchaseRequestService{

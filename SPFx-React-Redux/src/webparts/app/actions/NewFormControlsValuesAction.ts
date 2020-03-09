@@ -1,4 +1,4 @@
-import { INewFormState } from '../state/INewFormControlsState';
+import { INewFormState } from '../components/App/INewFormControlsState';
 import NewPurchaseRequestService from '../services/NewPurchaseRequestService';
 
 // The file contains actions for the NewPurchaseRequestReducer
@@ -8,7 +8,7 @@ export function GetInitialControlValuesAction(){
 
      return dispatch => {
        
-        let newPurchaseRequestServiceObj:NewPurchaseRequestService = new NewPurchaseRequestService();
+        let newPurchaseRequestServiceObj:NewPurchaseRequestService = new NewPurchaseRequestService();   
         let formControlsState = {purchasedForOptions:[],typeOfPurchaseRequestOptions:[]} as INewFormState;
 
         newPurchaseRequestServiceObj.getNewFormControlsState().then((resp:INewFormState) => {

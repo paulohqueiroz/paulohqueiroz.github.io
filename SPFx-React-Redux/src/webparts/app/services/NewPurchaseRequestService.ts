@@ -1,6 +1,6 @@
 import INewPurchaseRequestService from "./INewPurchaseRequestService";
 import pnp from "sp-pnp-js";
-import { INewFormState } from "../state/INewFormControlsState";
+import { INewFormState } from "../components/App/INewFormControlsState";
 import { ItemAddResult,Web } from "sp-pnp-js";
 
 
@@ -13,7 +13,6 @@ export default class NewPurchaseRequestService implements INewPurchaseRequestSer
     }
 
     private getTypeOfPurchaseRequestValues():Promise<any>{
-        debugger;
         return pnp.sp.web.fields.getByTitle("TypeOfPR").select("Choices").get().then(response => {
             return response;
         });
@@ -71,4 +70,5 @@ export default class NewPurchaseRequestService implements INewPurchaseRequestSer
                 }
         });
     }
+    
 }

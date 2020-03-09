@@ -1,6 +1,6 @@
-What is redux and what it does resolve?
+What is Redux and what it does resolve?
 
-Redux is a state management tool. It can be used with JavaScript, React, C#. It helps the applications to run consistently. 
+Redux is a state management tool // pattern . It can be used with JavaScript, React, C#. It helps the applications to run consistently. 
 
 As Redux documentation says:
 "The whole state of your app is stored in an object tree inside a single store. The only way to change the state tree is to emit an action, an object describing what happened. To specify how the actions transform the state tree, you write pure reducers."
@@ -11,9 +11,8 @@ That's it!
 
 1. Store:  Globalized state
 2. Action: e.g. Increment
-3. Reducer: 
-4. Dispatch: 
-
+3. Reducer: A function that receives the state and the action, it returns a new object that represents the new state
+4. Dispatch: Send the instruction of an Action. e.g: store.dispatch({ type: 'INCREMENT' })
 
 Some other resources: 
 

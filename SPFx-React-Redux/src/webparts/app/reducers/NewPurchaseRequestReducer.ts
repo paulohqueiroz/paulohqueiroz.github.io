@@ -1,7 +1,6 @@
-import { INewFormState } from '../state/INewFormControlsState';
-import { GetInitialControlValuesAction } from '../actions/NewFormControlsValuesAction';
+import { INewFormState } from '../components/App/INewFormControlsState';
 
-// Initial state of the purcahse request.
+// Initial state of the Purchase Request.
 export const newFormControlsInitialState:INewFormState = {
     purchasedFor:"",
     typeOfPurchaseRequest:"",
@@ -9,6 +8,7 @@ export const newFormControlsInitialState:INewFormState = {
     typeOfPurchaseRequestOptions:[],
     purchaseItems:[]
 };
+
 
 export const NewPurchaseRequestReducer = (state:INewFormState=newFormControlsInitialState,action) => {
     switch(action.type){

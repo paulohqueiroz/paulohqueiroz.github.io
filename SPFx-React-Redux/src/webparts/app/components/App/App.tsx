@@ -4,7 +4,7 @@ import { IAppProps } from './IAppProps';
 import { escape } from '@microsoft/sp-lodash-subset';
 import ConfigureStore from "../../store/ConfigureStore";
 import { connect } from "react-redux";
-import {INewFormState} from "../../state/INewFormControlsState";
+import {INewFormState} from "./INewFormControlsState";
 import { Provider } from "react-redux";
 import NewPurchaseRequestComponent from "../CreateNewRequest/CreateNewRequestComponent";
 

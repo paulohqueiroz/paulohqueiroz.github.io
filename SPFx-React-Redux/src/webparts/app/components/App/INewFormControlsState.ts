@@ -13,7 +13,7 @@ export interface INewFormState{
 
 
 // Represents one purchase item in the purchase request.
-export interface IPurchaseItem{
+export interface IPurchaseItem {
     productCode:string;
     quantity:number;
     ratePerUnit:number;

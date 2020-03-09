@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { INewFormState } from '../../state/INewFormControlsState';
+import { INewFormState } from '../App/INewFormControlsState';
 import { connect } from 'react-redux';
 import { Dispatch } from 'redux';
 import { IAppProps } from '../App/IAppProps';
@@ -11,30 +11,24 @@ import { Field, reduxForm, InjectedFormProps, FieldArray, WrappedFieldArrayProps
 import pnp from 'sp-pnp-js';
 import { renderDropDown, renderInput } from '../Redux-Form-CustomComponents/FieldRenderers';
 
-// Connected state
+    // Connected state
 interface INewFormConnectedState{
-
     // Represents a purchase request and the data from the form.
     newFormControlValues : INewFormState;
-
     // Represents the initial values. << Unused now. Useful for edit item feature >>
     initialValues:any;
 }
 
 // Represents the connected dispatch
 interface INewFormConnectedDispatch{
-
     // Gets the options for dropdown fields
     getDefaultControlsData:() => void;
-
     createNewPurchaseRequest:(purchaseRequestData:INewFormState, siteUrl:string) => void;
 }
 
 // Validations for the redux form
 const required = value => (value ? undefined : ' *');
-const number = value =>
-value && isNaN(Number(value)) ? ' Invalid value' : undefined;
-
+const number = value => value && isNaN(Number(value)) ? ' Invalid value' : undefined;
 
 // Represents the repeating purchase items component. 
 // Used in "NewRequestComponent" react component below along with "FieldsArray" from redux-form.
@@ -119,7 +113,6 @@ class NewRequestComponent extends React.Component<INewFormConnectedState & INewF
         purchaseRequestData = values;
         purchaseRequestData.purchasedForOptions = props.newFormControlValues.purchasedForOptions;
         purchaseRequestData.typeOfPurchaseRequestOptions = props.newFormControlValues.typeOfPurchaseRequestOptions;
-        
         // Call the connected dispatch to create new purchase request
         props.createNewPurchaseRequest(purchaseRequestData,props.siteUrl);
     }

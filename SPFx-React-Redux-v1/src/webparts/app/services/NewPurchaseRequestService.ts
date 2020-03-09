@@ -13,6 +13,7 @@ export default class NewPurchaseRequestService implements INewPurchaseRequestSer
     }
 
     private getTypeOfPurchaseRequestValues():Promise<any>{
+        debugger;
         return pnp.sp.web.fields.getByTitle("TypeOfPR").select("Choices").get().then(response => {
             return response;
         });

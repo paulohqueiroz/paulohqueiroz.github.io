@@ -30,7 +30,10 @@ export default class AppWebPart extends BaseClientSideWebPart <IAppWebPartProps>
     const element: React.ReactElement<IAppProps> = React.createElement(
       App,
       {
-        description: this.properties.description
+        description: this.properties.description,
+        siteUrl:this.context.pageContext.web.absoluteUrl,
+        spHttpClient:this.context.spHttpClient,
+        itemId:id
       }
     );
 

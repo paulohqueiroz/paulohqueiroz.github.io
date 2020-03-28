@@ -1,6 +1,30 @@
 What is Ecma Script 6?
 
+Accoding to Quora website: As its name indicates, ECMAScript 6 or ECMAScript 2015 is the sixth and latest version of the scripting language standard. The syntax rules of ECMAScript 6 make it easier for developers to write complex web application by taking advantage of new classes, modules, methods, keywords, and data types.
 
+
+key concepts: 
+
+1. immutable variables: const PI = 3.141593
+2. Block-Scoped Variables
+    for (let i = 0; i < a.length; i++) {
+        let x = a[i]
+        …
+    }
+    for (let i = 0; i < b.length; i++) {
+        let y = b[i]
+        …
+    }
+3. Arrow functions
+    
+    odds  = evens.map(v => v + 1)
+
+4. Default Parameter Values
+
+    function f (x, y = 7, z = 42) {
+        return x + y + z
+    }
+    f(1) === 50
 
 
 
@@ -10,4 +34,5 @@ What is Ecma Script 6?
 You can find more information and you can dive into some advanced concepts by accessing here:
 
 Reading:
-    1. http://es6-features.org/#Constants
+    1. http://es6-features.org/
+

@@ -21,3 +21,13 @@ gulp test - TODO
 gulp serve - TODO
 gulp bundle - TODO
 gulp package-solution - TODO
+
+
+//mongo db 
+name: p8queiroz
+pw: asdfasdf
+connection string: mongodb+srv://p8queiroz:<password>@cluster0-tm76d.mongodb.net/test?retryWrites=true&w=majority
+
+
+To study:
+mangoose 

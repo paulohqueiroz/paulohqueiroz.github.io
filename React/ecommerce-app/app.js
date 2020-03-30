@@ -5,6 +5,10 @@ dotenv.config()
 const app = express()
 require('dotenv').config()
 const userRoutes = require('./routes/user')
+const morgan  = require("morgan")
+const bodyParser = require("body-parser")
+const cookieParser = require("cookie-parser")
+
 
 const port = process.env.PORT || 8000
  
@@ -17,6 +21,13 @@ mongoose.connect(
   }
 )
 .then(() => console.log('DB Connected'))
+
+
+//middlewares
+app.use(morgan("dev"))
+app.use(bodyParser.json())
+app.use(cookieParser())
+
 
 
 mongoose.connection.on('error', err => {

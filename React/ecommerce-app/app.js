@@ -5,6 +5,9 @@ dotenv.config()
 const app = express()
 require("dotenv").config()
 const authRoutes = require("./routes/auth")
+const userRoutes = require("./routes/user")
+const categoryrRoutes = require("./routes/category")
+
 const morgan  = require("morgan")
 const bodyParser = require("body-parser")
 const cookieParser = require("cookie-parser")
@@ -34,6 +37,8 @@ mongoose.connection.on('error', err => {
 })
 
 app.use("/api", authRoutes)
+app.use("/api", userRoutes)
+app.use("/api", categoryrRoutes)
 
 app.listen(port, () => {
     console.log(`server is running on port: ${port}`)

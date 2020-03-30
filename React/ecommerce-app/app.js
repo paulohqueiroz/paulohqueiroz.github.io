@@ -1,14 +1,14 @@
-const express = require('express')
-const mongoose = require('mongoose')
-const dotenv = require('dotenv')
+const express = require("express")
+const mongoose = require("mongoose")
+const dotenv = require("dotenv")
 dotenv.config()
 const app = express()
-require('dotenv').config()
-const userRoutes = require('./routes/user')
+require("dotenv").config()
+const userRoutes = require("./routes/user")
 const morgan  = require("morgan")
 const bodyParser = require("body-parser")
 const cookieParser = require("cookie-parser")
-
+const expressValidator = require("express-validator")
 
 const port = process.env.PORT || 8000
  
@@ -27,6 +27,7 @@ mongoose.connect(
 app.use(morgan("dev"))
 app.use(bodyParser.json())
 app.use(cookieParser())
+app.use(expressValidator())
 
 
 

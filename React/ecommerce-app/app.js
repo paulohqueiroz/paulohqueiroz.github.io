@@ -6,7 +6,9 @@ const app = express()
 require("dotenv").config()
 const authRoutes = require("./routes/auth")
 const userRoutes = require("./routes/user")
-const categoryrRoutes = require("./routes/category")
+const categoryRoutes = require("./routes/category")
+const productRoutes = require("./routes/product")
+
 
 const morgan  = require("morgan")
 const bodyParser = require("body-parser")
@@ -38,7 +40,9 @@ mongoose.connection.on('error', err => {
 
 app.use("/api", authRoutes)
 app.use("/api", userRoutes)
-app.use("/api", categoryrRoutes)
+app.use("/api", categoryRoutes)
+app.use("/api", productRoutes)
+
 
 app.listen(port, () => {
     console.log(`server is running on port: ${port}`)
